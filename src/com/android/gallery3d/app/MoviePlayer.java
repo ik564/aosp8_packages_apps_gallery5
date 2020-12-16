@@ -364,14 +364,10 @@ public class MoviePlayer implements
     private void showSystemUi(boolean visible) {
         if (!ApiHelper.HAS_VIEW_SYSTEM_UI_FLAG_LAYOUT_STABLE) return;
 
-        int flag = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
+        int flag = View.SYSTEM_UI_FLAG_LOW_PROFILE;
         if (!visible) {
             // We used the deprecated "STATUS_BAR_HIDDEN" for unbundling
-            flag |= View.STATUS_BAR_HIDDEN | View.SYSTEM_UI_FLAG_FULLSCREEN
-                    | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                    | View.SYSTEM_UI_FLAG_IMMERSIVE;
+            flag |= View.SYSTEM_UI_FLAG_LOW_PROFILE;
         }
         mVideoView.setSystemUiVisibility(flag);
     }
