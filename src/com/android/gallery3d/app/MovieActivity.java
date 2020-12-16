@@ -97,8 +97,7 @@ public class MovieActivity extends AbstractPermissionActivity {
     private void setSystemUiVisibility(View rootView) {
         if (ApiHelper.HAS_VIEW_SYSTEM_UI_FLAG_LAYOUT_STABLE) {
             rootView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                    | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION);
+                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         }
     }
 
